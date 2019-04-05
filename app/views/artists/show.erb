@@ -1,9 +1,13 @@
 <h1><%=@single_artist.name%></h1>
 
 <% @single_artist.songs.each do |song| %>
+<a href="/songs/<%=song.slug%>">
+  <li><%=song.name%></li>
+</a>
+<% end %>
 
 
-<%<% @single_artist.genres.each do |genre| %>
+<% @single_artist.genres.each do |genre| %>
 <a href="/genres/<%=genre.slug%>">
   <li><%=genre.name%></li>
 </a>
